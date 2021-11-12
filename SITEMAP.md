@@ -28,10 +28,6 @@ ShoppingCart {
 Cart
 }
 
-ForgotPassword {
-AccountArea
-}
-
 Products {
 FilterAside
 ProductListing
@@ -63,13 +59,13 @@ RelatedProducts
 # Components
 
 Header {
-Image
+Canvas
 SearchFieldset
 Menu
 MainMenu
 }
 
-Image
+Canvas
 
 SearchFieldset {
 .input1A
@@ -80,7 +76,7 @@ DropdownCart
 }
 
 DropdownCart {
-Image
+Canvas
 
 .button2A
 .button3A
@@ -92,31 +88,27 @@ List
 }
 
 ProductPreview {
-Image
+Canvas
 }
 
 FeaturedCarousel {
 .button1A
 
-Image
+Canvas
 }
 
 FeaturedProducts {
 ProductPreview
 }
 
-ProductPreview {
-Image
-}
-
 FeaturedImages {
-Image
+Canvas
 }
 
 InstagramItems
 
 Footer {
-Image
+Canvas
 Social
 TitledList
 MailingFieldset
@@ -157,14 +149,12 @@ FilterNav
 Pagination
 }
 
-TextBlock
-
 FilterNav {
 .select1A
 }
 
 ProductItem {
-Image
+Canvas
 }
 
 ProductDetails {
