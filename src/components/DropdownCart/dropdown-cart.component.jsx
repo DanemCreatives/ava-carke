@@ -1,9 +1,7 @@
-import "./dropdown-cart.styles.scss";
+import "./dropdown-cart.style.scss";
 
 function DropdownCart() {
-  return (
-    <div className="dropdown-cart"></div>
-  );
+  return <div className="dropdown-cart"></div>;
 }
 
 export default DropdownCart;

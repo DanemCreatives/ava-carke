@@ -1,9 +1,7 @@
-import "./featured-images.styles.scss";
+import "./featured-images.style.scss";
 
 function FeaturedImages() {
-  return (
-    <div className="featured-images"></div>
-  );
+  return <div className="featured-images"></div>;
 }
 
 export default FeaturedImages;

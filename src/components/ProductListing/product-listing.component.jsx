@@ -1,9 +1,7 @@
-import "./product-listing.styles.scss";
+import "./product-listing.style.scss";
 
 function ProductListing() {
-  return (
-    <div className="product-listing"></div>
-  );
+  return <div className="product-listing"></div>;
 }
 
 export default ProductListing;

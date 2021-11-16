@@ -1,3 +1,17 @@
-.product-preview {
-    
+.product-preview__content {
+  @apply px-3 py-2;
+  border: solid 1px rgb(226, 226, 226);
+}
+
+.product-preview__image {
+  @apply w-full object-cover;
+}
+
+.product-preview__details {
+  @apply flex justify-between pt-3 pb-5;
+}
+
+.product-preview__title,
+.product-preview__price {
+  @apply text-lg text-gray-800;
 }

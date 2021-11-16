@@ -1,9 +1,7 @@
-import "./product-item.styles.scss";
+import "./product-item.style.scss";
 
 function ProductItem() {
-  return (
-    <div className="product-item"></div>
-  );
+  return <div className="product-item"></div>;
 }
 
 export default ProductItem;

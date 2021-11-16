@@ -1,9 +1,7 @@
-import "./login.styles.scss";
+import "./login.style.scss";
 
 function Login() {
-  return (
-    <div className="login"></div>
-  );
+  return <div className="login"></div>;
 }
 
 export default Login;

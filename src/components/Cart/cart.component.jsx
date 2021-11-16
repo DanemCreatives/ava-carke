@@ -1,9 +1,7 @@
-import "./cart.styles.scss";
+import "./cart.style.scss";
 
 function Cart() {
-  return (
-    <div className="cart"></div>
-  );
+  return <div className="cart"></div>;
 }
 
 export default Cart;

@@ -1,9 +1,7 @@
-import "./filter-aside.styles.scss";
+import "./filter-aside.style.scss";
 
 function FilterAside() {
-  return (
-    <div className="filter-aside"></div>
-  );
+  return <div className="filter-aside"></div>;
 }
 
 export default FilterAside;

@@ -1,8 +1,11 @@
-import "./home-page.styles.scss";
+import "./home-page.style.scss";
+import FeaturedProducts from "../../components/FeaturedProducts/featured-products.component";
 
 function HomePage() {
   return (
-    <div className="home-page"></div>
+    <div className="home-page">
+      <FeaturedProducts />
+    </div>
   );
 }
 

@@ -1,9 +1,7 @@
-import "./main-menu.styles.scss";
+import "./main-menu.style.scss";
 
 function MainMenu() {
-  return (
-    <div className="main-menu"></div>
-  );
+  return <div className="main-menu"></div>;
 }
 
 export default MainMenu;

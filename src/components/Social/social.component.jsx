@@ -1,9 +1,7 @@
-import "./social.styles.scss";
+import "./social.style.scss";
 
 function Social() {
-  return (
-    <div className="social"></div>
-  );
+  return <div className="social"></div>;
 }
 
 export default Social;
