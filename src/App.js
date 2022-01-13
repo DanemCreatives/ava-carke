@@ -40,6 +40,7 @@ function App({ currentUser, setCurrentUser }) {
   );
 }
 
+// get from top level
 const mapStateToProps = (state) => ({
   currentUser: state.user.currentUser,
 });
