@@ -6,7 +6,7 @@ module.exports = function (plop) {
       {
         type: "input",
         name: "name",
-        message: "controller name please",
+        message: "component name please",
       },
     ],
     actions: [
@@ -29,7 +29,7 @@ module.exports = function (plop) {
       {
         type: "input",
         name: "name",
-        message: "controller name please",
+        message: "page name please",
       },
     ],
     actions: [
@@ -41,6 +41,29 @@ module.exports = function (plop) {
       {
         type: "add",
         path: "src/pages/{{properCase name}}/{{dashCase name}}.style.scss",
+        templateFile: "src/plop-templates/style.hbs",
+      },
+    ],
+  });
+
+  plop.setGenerator("object", {
+    description: "application controller logic",
+    prompts: [
+      {
+        type: "input",
+        name: "name",
+        message: "object name please",
+      },
+    ],
+    actions: [
+      {
+        type: "add",
+        path: "src/objects/{{properCase name}}/{{dashCase name}}.object.jsx",
+        templateFile: "src/plop-templates/component.hbs",
+      },
+      {
+        type: "add",
+        path: "src/objects/{{properCase name}}/{{dashCase name}}.style.scss",
         templateFile: "src/plop-templates/style.hbs",
       },
     ],

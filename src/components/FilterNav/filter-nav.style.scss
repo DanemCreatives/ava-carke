@@ -1,3 +1,15 @@
 .filter-nav {
-    
+  @apply py-2 border-b flex;
+
+  &__sort {
+    @apply flex items-center justify-center;
+  }
+
+  &__label {
+    @apply bg-secondary text-white px-2 py-1 text-xs rounded border border-secondary;
+  }
+
+  &__select {
+    @apply mx-2 h-full outline-none;
+  }
 }

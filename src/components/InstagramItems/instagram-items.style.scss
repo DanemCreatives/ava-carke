@@ -1,3 +1,15 @@
 .instagram-items {
-    
+  @apply font-bold text-secondary container mx-auto pb-20;
+
+  &__header {
+    @apply text-3xl text-center py-8;
+
+    a {
+      @apply text-primary;
+    }
+  }
+
+  &__gallery {
+    @apply bg-gray-300 h-52 flex items-center justify-center text-gray-400 font-medium;
+  }
 }

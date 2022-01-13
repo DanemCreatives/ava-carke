@@ -1,3 +1,11 @@
 .social {
-    
+  @apply flex py-4;
+
+  &__link {
+    @apply mx-2;
+  }
+
+  &__icon {
+    @apply w-8 h-8;
+  }
 }

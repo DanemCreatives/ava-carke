@@ -1,3 +1,11 @@
 .titled-list {
-    
+  &__header {
+    @apply text-lg font-semibold pb-3 text-primary;
+  }
+
+  &__list {
+    li {
+      @apply list-none text-sm py-2 text-white;
+    }
+  }
 }

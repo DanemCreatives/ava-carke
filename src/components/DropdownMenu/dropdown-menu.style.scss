@@ -1,0 +1,22 @@
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdown-menu {
+  animation: fadeInDown 0.5s forwards;
+
+  &__inner {
+    @apply flex flex-col absolute bg-white inset-x-0 shadow-md top-full;
+  }
+
+  &__link {
+    @apply text-xs py-1 text-gray-600 px-2 py-3 uppercase transition duration-100 hover:bg-secondary hover:text-white;
+  }
+}

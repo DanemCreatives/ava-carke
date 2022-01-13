@@ -16,6 +16,5 @@ code {
 }
 
 h1 {
-  font-weight: 700;
-  @apply text-xl;
+  @apply text-xl font-bold;
 }

@@ -1,3 +1,11 @@
 .featured-images {
-    
+  @apply py-8;
+
+  &__header {
+    @apply text-center py-6 text-secondary uppercase;
+  }
+
+  &__canvas {
+    @apply w-full;
+  }
 }

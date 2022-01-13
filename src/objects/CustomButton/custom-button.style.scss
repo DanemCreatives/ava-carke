@@ -1,0 +1,19 @@
+.o-button {
+  @apply inline-block text-center;
+
+  &--primary {
+    @apply bg-primary text-white py-2 px-3 inline-block relative;
+  }
+
+  &--secondary {
+    @apply bg-white px-8 py-2 font-light text-sm uppercase text-secondary;
+  }
+
+  &--tertiary {
+    @apply bg-secondary text-white py-3 px-4 uppercase;
+  }
+
+  &--google {
+    @apply bg-google text-white py-3 px-4 uppercase;
+  }
+}

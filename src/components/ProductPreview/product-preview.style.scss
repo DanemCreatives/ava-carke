@@ -1,17 +1,29 @@
-.product-preview__content {
-  @apply px-3 py-2;
-  border: solid 1px rgb(226, 226, 226);
-}
+.product-preview {
+  @apply cursor-pointer;
 
-.product-preview__image {
-  @apply w-full object-cover;
-}
+  &__content {
+    border: solid 1px;
+    @apply px-3 py-2 border-gray-200;
+  }
 
-.product-preview__details {
-  @apply flex justify-between pt-3 pb-5;
-}
+  &__canvas {
+    @apply overflow-hidden;
+  }
 
-.product-preview__title,
-.product-preview__price {
-  @apply text-lg text-gray-800;
+  &__image {
+    @apply w-full object-cover transition duration-500 transform ease-in-out;
+  }
+
+  &__details {
+    @apply flex justify-between pt-3 pb-5;
+  }
+
+  &__title,
+  &__price {
+    @apply text-lg text-secondary transition duration-100;
+
+    .product-preview:hover & {
+      @apply text-primary;
+    }
+  }
 }

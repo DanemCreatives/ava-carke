@@ -1,3 +1,37 @@
 .product-item {
-    
+  @apply border py-2;
+
+  &__description {
+    @apply p-3;
+  }
+
+  &__code {
+    @apply text-xs uppercase text-gray-400;
+  }
+
+  &__title {
+    @apply pt-1 pb-3 text-gray-700 text-lg;
+  }
+
+  &__price {
+    @apply text-gray-700 text-lg;
+  }
+
+  &__canvas {
+    @apply relative p-4;
+  }
+
+  &__button {
+    @apply hidden absolute bottom-3 left-1/2 transform -translate-x-1/2 w-11/12;
+  }
+
+  &:hover {
+    .product-item__image {
+      @apply opacity-75;
+    }
+
+    .product-item__button {
+      @apply block;
+    }
+  }
 }

@@ -1,0 +1,12 @@
+.intro-text {
+  max-width: 700px;
+  @apply py-12 text-center mx-auto;
+
+  &__header {
+    @apply text-center text-3xl font-bold text-secondary;
+  }
+
+  &__paragraph {
+    @apply text-sm pt-6;
+  }
+}

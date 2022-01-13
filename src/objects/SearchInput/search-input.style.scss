@@ -1,0 +1,15 @@
+.o-search {
+  @apply shadow-md flex items-center justify-center h-12;
+
+  &__field {
+    @apply border border-gray-200 w-full h-full px-4 outline-none;
+  }
+
+  &__btn {
+    @apply h-full w-14 flex items-center justify-center bg-secondary;
+  }
+
+  &__img {
+    @apply h-full w-full p-3;
+  }
+}

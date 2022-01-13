@@ -1,7 +1,48 @@
 import "./dropdown-cart.style.scss";
+import { connect } from "react-redux";
+import { GrClose } from "react-icons/gr";
+import { deleteItem } from "../../redux/cart/cart.actions";
 
-function DropdownCart() {
-  return <div className="dropdown-cart"></div>;
+function DropdownCart({ cartItems, deleteItem }) {
+  return (
+    <div className="dropdown-cart">
+      {cartItems.length === 0 && (
+        <p className="dropdown-cart__paragraph">Your shopping cart is empty</p>
+      )}
+      <div className="dropdown-cart__items-container">
+        {cartItems.map((single, key) => (
+          <div className="dropdown-cart__item" key={key}>
+            <img
+              className="dropdown-cart__thumb"
+              src={single.product_thumbs && single.product_thumbs[0]}
+              alt={single.product_name}
+            />
+            <p className="dropdown-cart__title">{single.product_name}</p>
+            <div className="dropdown-cart__quantity">x {single.quantity}</div>
+            <div className="dropdown-cart__price">£{single.total_price}</div>
+            <div className="dropdown-cart__remove">
+              <div
+                className="dropdown-cart__remove-icon"
+                onClick={() => {
+                  deleteItem(single);
+                }}
+              >
+                <GrClose />
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }
 
-export default DropdownCart;
+const mapStateToProps = ({ cart: { cartItems } }) => ({
+  cartItems,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  deleteItem: (item) => dispatch(deleteItem(item)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(DropdownCart);

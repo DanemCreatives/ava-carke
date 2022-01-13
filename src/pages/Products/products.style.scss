@@ -1,3 +1,11 @@
-.products {
-    
+.products-page {
+  @apply bg-gray-50;
+
+  &__container {
+    @apply bg-white pb-10 pt-4 px-4;
+  }
+
+  &__body {
+    @apply pl-4;
+  }
 }

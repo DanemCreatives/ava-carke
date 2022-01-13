@@ -1,3 +1,8 @@
 .main-menu {
-    
+  &__list {
+    @apply flex items-center justify-around w-9/12 mx-auto;
+  }
+  &__item a {
+    @apply uppercase py-3 block text-secondary;
+  }
 }

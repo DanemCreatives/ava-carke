@@ -1,3 +1,5 @@
-.featured-products__header {
-  @apply text-center py-6 text-gray-700;
+.featured-products {
+  &__header {
+    @apply text-center pt-12 pb-8 text-secondary uppercase text-xl font-bold;
+  }
 }

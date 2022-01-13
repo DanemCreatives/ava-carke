@@ -1,3 +1,51 @@
 .featured-carousel {
-    
+  &__content {
+    @apply grid grid-cols-3 pb-12 h-full;
+  }
+
+  &__canvas {
+    @apply col-span-2;
+  }
+
+  &__image {
+    @apply object-cover h-full;
+  }
+
+  &__textbox {
+    @apply col-span-1 bg-secondary p-6 flex items-start flex-col justify-center;
+
+    h2 {
+      @apply text-2xl uppercase;
+    }
+
+    p {
+      @apply pt-4 pb-12 text-sm;
+    }
+
+    h2,
+    p {
+      @apply text-white w-full text-left;
+    }
+  }
+
+  .carousel {
+    .control-dots {
+      .dot {
+        @apply bg-secondary shadow-none opacity-100 h-2 w-2 border-secondary border transition duration-100;
+
+        &.selected {
+          @apply bg-white transform scale-150;
+        }
+      }
+    }
+
+    .control-prev,
+    .control-next {
+      height: 450px;
+    }
+
+    .slide {
+      @apply px-2;
+    }
+  }
 }

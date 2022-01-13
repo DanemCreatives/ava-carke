@@ -1,0 +1,9 @@
+.o-input {
+  &--primary {
+    @apply bg-white bg-opacity-50 px-4 py-3 outline-none text-white text-xs placeholder-white;
+  }
+
+  &--secondary {
+    @apply px-2 py-3 text-sm outline-none border border-gray-300;
+  }
+}

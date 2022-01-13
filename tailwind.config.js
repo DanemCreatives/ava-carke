@@ -11,7 +11,13 @@ module.exports = {
         "2xl": "7rem",
       },
     },
-    extend: {},
+    extend: {
+      colors: {
+        primary: "#d79a2b",
+        secondary: "#5c6e6c",
+        google: "#4c8bf5",
+      },
+    },
   },
   variants: {
     extend: {},

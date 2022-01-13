@@ -146,6 +146,7 @@ TextBlock
 
 ProductListing {
 FilterNav
+ProductItem
 Pagination
 }
 

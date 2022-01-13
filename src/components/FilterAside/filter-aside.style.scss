@@ -1,3 +1,27 @@
 .filter-aside {
-    
+  @apply pr-4 pt-4 pb-8 border-r h-full;
+
+  &__head {
+    @apply flex justify-between items-center pb-6;
+  }
+
+  &__body {
+    @apply bg-gray-100 h-full text-gray-400;
+  }
+
+  &__header {
+    @apply text-secondary uppercase text-sm;
+  }
+
+  &__clear {
+    @apply text-xs text-gray-500 flex items-center;
+
+    svg {
+      @apply mr-1 h-3;
+
+      path {
+        @apply stroke-current text-gray-500;
+      }
+    }
+  }
 }

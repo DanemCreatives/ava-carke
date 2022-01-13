@@ -1,3 +1,32 @@
 .footer {
-    
+  @apply bg-secondary pt-20;
+
+  &__logo {
+    max-width: 200px;
+  }
+
+  &__body {
+    @apply pb-10;
+  }
+
+  &__legal {
+    @apply border-t border-opacity-25;
+  }
+
+  &__copyright {
+    @apply text-xs text-center text-white py-4;
+  }
+
+  .social {
+    @apply items-center justify-center;
+  }
+
+  // GRID
+  .container {
+    @apply px-2;
+
+    .col {
+      @apply flex items-center flex-col;
+    }
+  }
 }

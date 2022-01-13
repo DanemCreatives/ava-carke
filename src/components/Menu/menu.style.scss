@@ -1,3 +1,28 @@
 .menu {
-    
+  @apply flex;
+
+  &__link {
+    @apply uppercase text-sm text-secondary h-full flex items-center;
+
+    &--items {
+      @apply flex items-center;
+    }
+  }
+
+  &__text {
+    @apply block pr-8;
+  }
+
+  &__icon {
+    @apply w-6 h-6;
+  }
+
+  &__dropdown-container {
+    width: 125px;
+    @apply relative h-full pr-8;
+  }
+
+  &__cart-container {
+    @apply relative h-full;
+  }
 }

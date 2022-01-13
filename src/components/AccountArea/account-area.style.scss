@@ -1,3 +1,23 @@
 .account-area {
-    
+  max-width: 700px;
+  @apply bg-gray-100 p-4 border border-gray-300 m-auto mb-6;
+
+  &__copy {
+    @apply py-4;
+    h1,
+    h2,
+    h3 {
+      @apply text-gray-800 font-semibold text-lg;
+    }
+    p {
+      @apply pt-2 pb-4 text-sm text-gray-800;
+    }
+    a {
+      @apply mr-4;
+    }
+  }
+
+  &__fieldset {
+    @apply flex flex-col;
+  }
 }

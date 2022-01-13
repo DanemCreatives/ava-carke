@@ -1,3 +1,58 @@
 .dropdown-cart {
-    
+  width: 500px;
+  animation: fadeInDown 0.5s forwards;
+  @apply absolute right-0 bg-white shadow-md p-4 text-sm text-gray-600 top-12;
+
+  &__paragraph {
+    @apply text-center;
+  }
+
+  &__item {
+    @apply flex items-center py-3 border-b;
+
+    &:last-child {
+      @apply border-b-0;
+    }
+  }
+
+  &__thumb {
+    flex-basis: 15%;
+    width: 70px;
+  }
+
+  &__title {
+    flex-basis: 50%;
+    @apply px-4;
+  }
+
+  &__quantity,
+  &__price,
+  &__remove {
+    @apply text-center;
+  }
+
+  &__quantity {
+    flex-basis: 10%;
+  }
+
+  &__price {
+    flex-basis: 15%;
+  }
+
+  &__remove {
+    flex-basis: 10%;
+    @apply flex items-center justify-center;
+  }
+
+  &__remove-icon {
+    @apply border border-gray-200 rounded-sm w-6 h-6 flex items-center justify-center cursor-pointer;
+
+    &:hover {
+      @apply bg-red-400 border-red-400;
+
+      svg path {
+        @apply stroke-current text-white;
+      }
+    }
+  }
 }
