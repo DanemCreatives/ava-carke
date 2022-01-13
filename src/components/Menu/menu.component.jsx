@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { connect } from "react-redux";
 import { FiShoppingBag } from "react-icons/fi";
 import "./menu.style.scss";
 import DropdownMenu from "../DropdownMenu/dropdown-menu.component";
@@ -52,14 +51,4 @@ function Menu({ itemCount, cartSubtotal }) {
   );
 }
 
-const mapStateToProps = ({ cart: { cartItems, cartSubtotal } }) => {
-  return {
-    itemCount: cartItems.reduce(
-      (totalQuantity, cartItem) => totalQuantity + cartItem.quantity,
-      0
-    ),
-    cartSubtotal: cartSubtotal,
-  };
-};
-
-export default connect(mapStateToProps)(Menu);
+export default Menu;

@@ -1,13 +1,15 @@
 import "./login.style.scss";
 import { Navigate } from "react-router-dom";
-import { connect } from "react-redux";
 import AccountArea from "../../components/AccountArea/account-area.component";
 import IntroText from "../../components/IntroText/intro-text.component";
 import CustomButton from "../../objects/CustomButton/custom-button.object";
 import { googleSignIn } from "../../utils/firebase.utils";
+import { getAuth } from "firebase/auth";
 
 function Login({ currentUser }) {
-  return currentUser ? (
+  const auth = getAuth();
+
+  return auth.currentUser ? (
     <Navigate to="/" />
   ) : (
     <div className="login page">
@@ -33,8 +35,4 @@ function Login({ currentUser }) {
   );
 }
 
-const mapStateToProps = (state) => ({
-  currentUser: state.user.currentUser,
-});
-
-export default connect(mapStateToProps)(Login);
+export default Login;

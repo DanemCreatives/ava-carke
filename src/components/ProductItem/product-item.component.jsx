@@ -1,9 +1,7 @@
 import CustomButton from "../../objects/CustomButton/custom-button.object";
 import "./product-item.style.scss";
-import { connect } from "react-redux";
-import { addToCart } from "../../redux/cart/cart.actions";
 
-function ProductItem({ single, addToCart }) {
+function ProductItem({ single }) {
   return (
     <div className="product-item">
       <div className="product-item__canvas">
@@ -12,13 +10,7 @@ function ProductItem({ single, addToCart }) {
           src={single.product_gallery[0]}
           alt={single.product_name}
         />
-        <CustomButton
-          className="product-item__button"
-          type="tertiary"
-          onClick={() => {
-            addToCart(single);
-          }}
-        >
+        <CustomButton className="product-item__button" type="tertiary">
           Add To Cart
         </CustomButton>
       </div>
@@ -37,8 +29,4 @@ function ProductItem({ single, addToCart }) {
   );
 }
 
-const mapDispatchToProps = (dispatch) => ({
-  addToCart: (user) => dispatch(addToCart(user)),
-});
-
-export default connect(null, mapDispatchToProps)(ProductItem);
+export default ProductItem;

@@ -1,5 +1,4 @@
 import "./user-notification.style.scss";
-import { connect } from "react-redux";
 import IntroText from "../../components/IntroText/intro-text.component";
 
 function UserNotification({ currentUser }) {
@@ -17,8 +16,4 @@ function UserNotification({ currentUser }) {
   );
 }
 
-const mapStateToProps = (state) => ({
-  currentUser: state.user.currentUser,
-});
-
-export default connect(mapStateToProps)(UserNotification);
+export default UserNotification;

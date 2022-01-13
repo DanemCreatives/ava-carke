@@ -1,9 +1,10 @@
 import "./dropdown-cart.style.scss";
-import { connect } from "react-redux";
 import { GrClose } from "react-icons/gr";
-import { deleteItem } from "../../redux/cart/cart.actions";
+import { useState } from "react";
 
-function DropdownCart({ cartItems, deleteItem }) {
+function DropdownCart() {
+  const [cartItems] = useState([]);
+
   return (
     <div className="dropdown-cart">
       {cartItems.length === 0 && (
@@ -21,12 +22,7 @@ function DropdownCart({ cartItems, deleteItem }) {
             <div className="dropdown-cart__quantity">x {single.quantity}</div>
             <div className="dropdown-cart__price">£{single.total_price}</div>
             <div className="dropdown-cart__remove">
-              <div
-                className="dropdown-cart__remove-icon"
-                onClick={() => {
-                  deleteItem(single);
-                }}
-              >
+              <div className="dropdown-cart__remove-icon">
                 <GrClose />
               </div>
             </div>
@@ -37,12 +33,4 @@ function DropdownCart({ cartItems, deleteItem }) {
   );
 }
 
-const mapStateToProps = ({ cart: { cartItems } }) => ({
-  cartItems,
-});
-
-const mapDispatchToProps = (dispatch) => ({
-  deleteItem: (item) => dispatch(deleteItem(item)),
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(DropdownCart);
+export default DropdownCart;

@@ -1,9 +1,7 @@
 import "./App.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import { getAuth } from "firebase/auth";
-import { connect } from "react-redux";
-import { setCurrentUser } from "./redux/user/user.actions";
 import Header from "./components/Header/header.component";
 import HomePage from "./pages/HomePage/home-page.page";
 import ProductsPage from "./pages/Products/products.page";
@@ -12,7 +10,9 @@ import RegisterAccount from "./pages/RegisterAccount/register-account.page";
 import Footer from "./components/Footer/footer.component";
 import UserNotification from "./pages/UserNotification/user-notification.page";
 
-function App({ currentUser, setCurrentUser }) {
+function App() {
+  const [currentUser, setCurrentUser] = useState(null);
+
   useEffect(() => {
     getAuth().onAuthStateChanged((user) => {
       if (user) {
@@ -40,12 +40,4 @@ function App({ currentUser, setCurrentUser }) {
   );
 }
 
-const mapStateToProps = (state) => ({
-  currentUser: state.user.currentUser,
-});
-
-const mapDispatchToProps = (dispatch) => ({
-  setCurrentUser: (user) => dispatch(setCurrentUser(user)),
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default App;
