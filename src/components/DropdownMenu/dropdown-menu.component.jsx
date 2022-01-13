@@ -1,13 +1,16 @@
 import "./dropdown-menu.style.scss";
+
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
 import { getAuth, signOut } from "firebase/auth";
 
 function DropdownMenu({ currentUser }) {
+  console.log(currentUser);
   const auth = getAuth();
 
   return (
     <div className="dropdown-menu">
-      {auth.currentUser ? (
+      {currentUser ? (
         <div className="dropdown-menu__inner">
           <Link
             className="dropdown-menu__link dropdown-menu__link--orders"
@@ -43,4 +46,8 @@ function DropdownMenu({ currentUser }) {
   );
 }
 
-export default DropdownMenu;
+const mapStateToProps = (state) => ({
+  currentUser: state.user.currentUser,
+});
+
+export default connect(mapStateToProps)(DropdownMenu);
