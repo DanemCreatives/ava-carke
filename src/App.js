@@ -1,5 +1,5 @@
 import "./App.css";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import { connect } from "react-redux";
 import { getAuth } from "firebase/auth";
@@ -11,6 +11,7 @@ import Login from "./pages/Login/login.page";
 import RegisterAccount from "./pages/RegisterAccount/register-account.page";
 import Footer from "./components/Footer/footer.component";
 import UserNotification from "./pages/UserNotification/user-notification.page";
+import ShoppingCart from "./pages/ShoppingCart/shopping-cart.page";
 
 function App({ currentUser, setCurrentUser }) {
   useEffect(() => {
@@ -33,6 +34,7 @@ function App({ currentUser, setCurrentUser }) {
           <Route path="/login" element={<Login />} />
           <Route path="/register-account" element={<RegisterAccount />} />
           <Route path="/user-notification" element={<UserNotification />} />
+          <Route path="/shopping-cart" element={<ShoppingCart />} />
         </Routes>
         <Footer />
       </div>
