@@ -16,4 +16,16 @@
   &--google {
     @apply bg-google text-white py-3 px-4 uppercase;
   }
+
+  &--warning {
+    @apply bg-red-300 text-white p-4;
+  }
+
+  &--success {
+    @apply bg-success text-white p-4;
+
+    &.updating {
+      @apply animate-pulse;
+    }
+  }
 }

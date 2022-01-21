@@ -16,6 +16,7 @@ module.exports = {
         primary: "#d79a2b",
         secondary: "#5c6e6c",
         google: "#4c8bf5",
+        success: "#87c987",
       },
     },
   },

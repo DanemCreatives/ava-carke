@@ -55,4 +55,12 @@
       }
     }
   }
+
+  &__ctas {
+    @apply pt-4;
+  }
+
+  &__button {
+    @apply w-full;
+  }
 }

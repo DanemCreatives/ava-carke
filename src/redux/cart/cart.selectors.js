@@ -19,7 +19,10 @@ export const selectCartQuantity = createSelector([selectCart], (cart) => {
 // Selects the total price of the cart
 export const selectCartTotal = createSelector([selectCart], (cart) => {
   return cart.cartItems.reduce(
-    (previous, current) => current.product_price * current.quantity + previous,
+    (previous, current) =>
+      parseFloat(
+        (current.product_price * current.quantity + previous).toFixed(2)
+      ),
     0
   );
 });

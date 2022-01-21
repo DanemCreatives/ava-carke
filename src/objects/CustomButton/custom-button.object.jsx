@@ -5,7 +5,11 @@ function CustomButton({ to, type, children, className, ...otherProps }) {
   let markup;
   if (to) {
     markup = (
-      <Link to={to} className={`o-button o-button--${type}`} {...otherProps}>
+      <Link
+        to={to}
+        className={`${className} o-button o-button--${type}`}
+        {...otherProps}
+      >
         {children}
       </Link>
     );

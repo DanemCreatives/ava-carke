@@ -272,6 +272,44 @@ const ShoppingData = [
       { depth: "50.00 cm" },
     ],
   },
+  {
+    id: 8,
+    product_name: "Executive office black chair",
+    product_code: "SKU-TH5327DS",
+    product_price: 149.99,
+    product_gallery: [
+      "https://www.taralane.ie/image/cache/intact/TH5327DS-2000x2000.jpg",
+      "https://www.taralane.ie/image/cache/intact/TH5327DSALT1-2000x2000.jpg",
+      "https://www.taralane.ie/image/cache/intact/TH5327DSALT2-2000x2000.jpg",
+      "https://www.taralane.ie/image/cache/intact/TH5327DSALT3-2000x2000.jpg",
+      "https://www.taralane.ie/image/cache/intact/TH5327DSALT4-2000x2000.jpg",
+    ],
+    product_thumbs: [
+      "https://www.taralane.ie/image/cache/intact/TH5327DS-120x120.jpg",
+      "https://www.taralane.ie/image/cache/intact/TH5327DSALT1-120x120.jpg",
+      "https://www.taralane.ie/image/cache/intact/TH5327DSALT2-120x120.jpg",
+      "https://www.taralane.ie/image/cache/intact/TH5327DSALT3-120x120.jpg",
+      "https://www.taralane.ie/image/cache/intact/TH5327DSALT4-120x120.jpg",
+    ],
+    availability: "in stock",
+    type: ["chair"],
+    category: ["furniture"],
+    colour: ["black"],
+    room: ["study room", "bedroom"],
+    description:
+      "The modern style features breathable open mesh back support, a contoured mesh fabric seat cushion, height-adjustable headrest, padded flip-up armrests offering more comfort.",
+    features: [
+      "Executive Office Chair",
+      "Breathble mesh back",
+      "Fixed arms",
+      "Multi-Adjustable",
+    ],
+    dimensions: [
+      { width: "54.00 cm" },
+      { height: "111.00 cm" },
+      { depth: "64.00 cm" },
+    ],
+  },
 ];
 
 export default ShoppingData;

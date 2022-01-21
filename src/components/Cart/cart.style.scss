@@ -1,3 +1,84 @@
 .cart {
-    
+  @apply pb-10 text-sm;
+
+  &__head {
+    @apply border border-gray-200 uppercase;
+  }
+
+  &__body {
+    @apply border border-gray-200 border-t-0;
+  }
+
+  &__foot {
+    @apply mt-4 bg-gray-100 border border-gray-200;
+  }
+
+  &__title-cell {
+    @apply py-3 font-semibold text-secondary flex items-center justify-center;
+
+    &--name {
+      @apply justify-start pl-4;
+    }
+  }
+
+  &__cell {
+    @apply text-secondary p-2 border-r flex items-center justify-center;
+
+    &--name {
+      @apply justify-start pl-4;
+    }
+
+    &--image {
+      @apply p-2;
+    }
+
+    &--quantity {
+      @apply px-6 py-4;
+    }
+
+    &--total {
+      @apply border-r-0;
+    }
+  }
+
+  &__base-cell {
+    @apply text-secondary py-4;
+
+    &--title {
+      @apply flex items-center justify-end pr-4 uppercase font-semibold;
+    }
+    &--subtotal {
+      @apply uppercase text-center font-semibold border-l border-gray-200 text-lg;
+    }
+  }
+
+  &__quantity-input {
+    flex-basis: 100%;
+    @apply text-center text-lg h-full;
+  }
+
+  &__delete-product,
+  &__update-product {
+    flex-basis: 100%;
+    @apply h-full ml-2;
+    svg {
+      @apply m-auto;
+    }
+    path {
+      @apply stroke-current text-white;
+    }
+  }
+
+  &__preview {
+    height: 60px;
+  }
+
+  &__ctas {
+    @apply flex justify-end items-center pt-4;
+  }
+
+  &__button {
+    min-width: 200px;
+    @apply py-4;
+  }
 }
